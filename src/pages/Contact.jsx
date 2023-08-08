@@ -2,7 +2,9 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <Helmet title="Liên hệ">
+        <div>Contact</div>
+    </Helmet>
   )
 }
 

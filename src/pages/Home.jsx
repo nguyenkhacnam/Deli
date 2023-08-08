@@ -11,7 +11,6 @@ import ProductCard from '../components/ProductCard'
 import heroSliderData from '../assets/fake-data/hero-slider'
 import policy from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/products'
-
 import banner from '../assets/images/banner.png'
 
 const Home = () => {

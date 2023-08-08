@@ -4,10 +4,10 @@ import { useRef } from 'react'
 const CheckBox = props => {
 
     const inputRef = useRef(null)
-
     const onChange = () => {
         if (props.onChange) {
             props.onChange(inputRef.current)
+            // console.log(inputRef.current);
         }
     }
 

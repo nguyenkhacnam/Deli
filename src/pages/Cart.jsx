@@ -16,31 +16,20 @@ import { UserAuth } from '../context/AuthContext'
 const Cart = () => {
 
     const cartItems = useSelector((state) => state.cartItems.value)
-
-    
-
     const [cartProducts, setCartProducts] = useState(productData.getCartItemsInfo(cartItems))
 
     const [totalProducts, setTotalProducts] = useState(0)
 
     const [totalPrice, setTotalPrice] = useState(0)
-
-
     const { user } = UserAuth()
-
-    
-
-console.log(user)
+// console.log(user)
 
 
-console.log(cartProducts)
+// console.log(cartProducts)
     useEffect(() => {
         setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
         setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
-        console.log(user)
-        // console.log(cartProducts.length)
-
     }, [cartItems])
 
     return (

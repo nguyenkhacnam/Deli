@@ -7,12 +7,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAQikBuRGVc47dFERE4ZuMQpgVhu3S-bDU",
-  authDomain: "project-1788578518932579874.firebaseapp.com",
-  projectId: "project-1788578518932579874",
-  storageBucket: "project-1788578518932579874.appspot.com",
-  messagingSenderId: "487666037281",
-  appId: "1:487666037281:web:d9110d6de01acae48b2960"
+    apiKey: "AIzaSyAoHo5ETpSjyS9FDse5t_4bpVqhvqlafWs",
+    authDomain: "deli-react.firebaseapp.com",
+    projectId: "deli-react",
+    storageBucket: "deli-react.appspot.com",
+    messagingSenderId: "427858832950",
+    appId: "1:427858832950:web:c44a2cc7251ac78bc7f297",
+    measurementId: "G-QJKETYWXMT"
 };
 
 // Initialize Firebase

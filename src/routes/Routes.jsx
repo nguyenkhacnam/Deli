@@ -18,22 +18,21 @@ import Profile from '../pages/Profile'
 
 const Routes = () => {
 
-   
-    return (
-        <Switch> 
-        <Route path='/' exact component={Home} />
-        <Route path='/Signin' exact component={Signin} />
-        <Route path='/catalog/:slug' component={Product} />
-        <Route path='/catalog' component={Catalog} />
-        <Route path='/cart' component={Cart} />
-        <Route path='/accessories' component={Accessories} />
-        {/* <Route path='/contact' component={Contact} /> */}
-        <Route path='/contact' component={Footer} />
-        <Route path='/signup' component={Signup} />
-        <Route path='/forgetpassword' component={ForgetPassword}/>
 
-        <Route path='/profile' component={Profile}/>
-        
+    return (
+        <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/Signin' exact component={Signin} />
+            <Route path='/catalog/:slug' component={Product} />
+            <Route path='/catalog' component={Catalog} />
+            <Route path='/cart' component={Cart} />
+            <Route path='/accessories' component={Accessories} />
+            <Route path='/contact' component={Footer} />
+            <Route path='/signup' component={Signup} />
+            <Route path='/forgetpassword' component={ForgetPassword} />
+
+            <Route path='/profile' component={Profile} />
+
         </Switch>
     )
 }

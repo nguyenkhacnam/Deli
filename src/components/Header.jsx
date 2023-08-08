@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import logo from '../assets/images/Logo-2.png'
 import Account from './Account'
 import { UserAuth } from '../context/AuthContext'
 
@@ -29,7 +30,9 @@ const Header = () => {
     const { pathname } = useLocation()
     const { user } = UserAuth()
     const activeNav = mainNav.findIndex(e => e.path === pathname)
-
+    const menuLeft = useRef(null)
+    const menuToggle = () => menuLeft.current.classList.toggle('active')
+    
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -43,13 +46,12 @@ const Header = () => {
         };
     }, []);
 
-    const menuLeft = useRef(null)
-
-    const menuToggle = () => menuLeft.current.classList.toggle('active')
 
     return (
         <div className="header" ref={headerRef}>
             <div className="container">
+                <div className="header__logo">
+                </div>
                 <div className="header__menu">
                     <div className="header__menu__mobile-toggle" onClick={menuToggle}>
                         <i className='bx bx-menu-alt-left'></i>

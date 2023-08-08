@@ -5,22 +5,20 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 
 const HeroSlider = props => {
-
     const data = props.data
-
     const timeOut = props.timeOut ? props.timeOut : 3000
 
     const [activeSlide, setActiveSlide] = useState(0);
 
-    const nextSlide = useCallback(
-        () => {
-            const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
-            setActiveSlide(index)
-        },
-        [activeSlide, data],
-        console.log(data)
-    )
+    // const nextSlide = useCallback(() => {
+    //     const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
+    //     setActiveSlide(index)
+    // },[activeSlide, data])
 
+    const nextSlide = () => {
+        const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
+        setActiveSlide(index)
+    }
     const prevSlide = () => {
         const index = activeSlide - 1 < 0 ? data.length - 1 : activeSlide - 1
         setActiveSlide(index)
@@ -41,7 +39,7 @@ const HeroSlider = props => {
         <div className="hero-slider">
             {
                 data.map((item, index) => (
-                    <HeroSliderItem key={index} item={item} active={index === activeSlide}/>
+                    <HeroSliderItem key={index} item={item} active={index === activeSlide} />
                 ))
             }
             {

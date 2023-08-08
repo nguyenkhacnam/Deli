@@ -12,17 +12,18 @@ const ProductView = props => {
     const dispatch = useDispatch()
 
     let product = props.product
-
-    if (product === undefined) product = {
-        title: "",
-        price: '',
-        image01: null,
-        image02: null,
-        categorySlug: "",
-        colors: [],
-        slug: "",
-        size: [],
-        description: ""
+    if (product === undefined) {
+        product = {
+            title: "",
+            price: '',
+            image01: null,
+            image02: null,
+            categorySlug: "",
+            colors: [],
+            slug: "",
+            size: [],
+            description: ""
+        }
     }
 
     const [previewImg, setPreviewImg] = useState(product.image01)

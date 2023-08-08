@@ -7,10 +7,10 @@ import Routes from '../routes/Routes'
 
 
 const Layout = () => {
-   
+
     return (
         <Router>
-         <Route render={props => (
+            <Route render={props => (
                 <div>
                     <Header {...props} />
                     <div className="container">
@@ -21,7 +21,7 @@ const Layout = () => {
                     <Footer />
                     <ProductViewModal />
                 </div>
-            )} /> 
+            )} />
         </Router>
     )
 
